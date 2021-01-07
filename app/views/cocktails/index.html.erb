@@ -1,9 +1,9 @@
 <ul>
-  <div class="container">
+  <div class="container mt-5">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
-        <div class="card" style="width: 18rem;">
-          <img src="01.jpg" class="card-img-top" alt="...">
+        <div class="card ml-1 mr-1 mb-3" style="width: 18rem;">
+          <img src="<%=asset_path('01.jpg')  %>" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title"><%= cocktail.name %></h5>
             <%= link_to "+ details", cocktail_path(cocktail) %>
