@@ -1,17 +1,15 @@
 <ul>
-  <div class="container mt-5">
-    <%= link_to "+ New cocktail", new_cocktail_path %>
+  <%= link_to "+ New cocktail", new_cocktail_path %>
 
-    <div class="row">
-      <% @cocktails.each do |cocktail| %>
-        <div class="card ml-1 mr-1 mb-3" style="width: 18rem;">
-          <%= image_tag cocktail.image, class: 'card-img-top'%>
-          <div class="card-body">
-            <h5 class="card-title"><%= cocktail.name %></h5>
-            <%= link_to "+ details", cocktail_path(cocktail) %>
-          </div>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card ml-1 mr-1 mb-3" style="width: 18rem;">
+        <%= image_tag cocktail.image, class: 'card-img-top'%>
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+          <%= link_to "+ details", cocktail_path(cocktail) %>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </ul>
