@@ -16,8 +16,8 @@ Ingredient.destroy_all
 puts 'All ingredients were deleted!'
 puts 'Creating new ingredients...'
 
-url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
-ingredients_serialized = open(url).read
+file = Rails.root.join('db/ingredients.json')
+ingredients_serialized = File.read(file)
 ingredients = JSON.parse(ingredients_serialized)
 drinks = ingredients['drinks']
 
