@@ -6,7 +6,7 @@
     
     <div class="card-body">
       <h5 class="card-title"><%= @cocktail.name %></h5>
-      <p class="card-text">Doses</p>
+      <h6 class="card-text"><%= @cocktail.description %></h6>
       <p class="card-text">
         <small class="text-muted">
           <% @cocktail.doses.each do |dose| %>

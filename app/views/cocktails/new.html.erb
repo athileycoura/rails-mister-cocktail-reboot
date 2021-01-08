@@ -1,6 +1,8 @@
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.button :submit %>
-  <%= f.file_field :image %>
-<% end %>
+<div class="container">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.button :submit %>
+    <%= f.file_field :image %>
+  <% end %>
+</div>
